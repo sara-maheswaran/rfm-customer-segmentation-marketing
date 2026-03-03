@@ -145,10 +145,34 @@ Each row represents a unique customer, and each column represents demographic in
 
 <input type="checkbox">
 <label>Why we cleaned our data, and the best strategy </label><br>
-<input type="checkbox">
-<label>Missing values or outliers addressed through preprocessing</label><br>
 
-### Exploratory Data Analysis
+- **Purpose of Data Cleaning:** Ensure accurate and actionable customer insights by addressing inconsistencies and anomalies in the marketing dataset.
+
+- **Key Issues Identified:**
+  - Missing values in the `Income` column.
+  - Unrealistic birth years (e.g., 1893) leading to age outliers.
+  - Extreme high-income outliers (e.g., $666,666).
+  - Constant or non-informative columns (`Z_CostContact`, `Z_Revenue`).
+  - Categorical inconsistencies in `Education` and `Marital_Status`.
+  - Skewed spending variables.
+
+- **Data Cleaning & Preprocessing Strategy (Justified):**
+  - **Income Imputation:** Missing `Income` values were replaced with the median.  
+    *Justification:* Median is robust to outliers and preserves central tendency without being skewed by extreme values.
+  - **Outlier Removal:** Extreme values in `Age` and `Income` were removed using the Interquartile Range (IQR) method.  
+    *Justification:* IQR is a standard and effective technique to detect extreme values, preventing them from disproportionately influencing clustering and predictive models.
+  - **Drop Constant Columns:** Columns with no variance were removed.  
+    *Justification:* Columns with a single constant value provide no predictive power, so removing them simplifies models and improves efficiency.
+  - **Categorical Standardization & Consolidation:** Standardized `Education` and `Marital_Status` and grouped categories into meaningful levels.  
+    *Justification:* Reduces noise from inconsistent labeling and small categories, improving clustering accuracy and interpretability.
+  - **Datetime Conversion:** `Dt_Customer` was converted to datetime and used to calculate `Customer_Tenure_Days`.  
+    *Justification:* Enables calculation of tenure-related features, which are important for understanding customer loyalty and lifecycle stage.
+  - **Feature Engineering:** Created `Age`, `Total_Spending`, `Total_Purchases`, `Children_at_home`, `Family_Size`.  
+    *Justification:* Derived features summarize behavior and demographics, improving segmentation, RFM analysis, and CLV modeling.
+  - **Log Transformation of Spending:** Spending variables were log-transformed to reduce skew.  
+    *Justification:* Reduces the influence of extreme spenders, allowing clustering and regression models to better capture general patterns.
+
+-### Exploratory Data Analysis
 
 <input type="checkbox">
 <label>How we explored the relationships between different variables </label><br>
