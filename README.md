@@ -47,7 +47,7 @@ The primary project goals are to:
 >### **Full project plan is outlined [here](google.com).**
 
 # **Installation and Run:**
-- Read and follow instructions in [SETUP.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/SETUP.md) file
+>- Read and follow instructions in [SETUP.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/SETUP.md) file
 
 ###
 
@@ -145,7 +145,7 @@ Data Cleaning & Preprocessing Strategy:
     - Majority of customers are married and hold a graduation-level education
     - Average customer age is approximately 57 years
 
-For more inisights, see Exploratory Data Analysis folder. **add link**
+>**For more insights, see [Exploratory Data Analysis README.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/tree/main/data/raw).**
 
 ## Model Development
 
@@ -231,7 +231,7 @@ The total purchaces and spending of each cluster is:
 | 3	| Potential Loyals | 616 | 15730.641844 | 25.536756 | 21.021104 | 37.212538 |
 
 ## Ethical Implications and Biases
-Possible ethical implications and biases are described in the notebook [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Ethical%20Implications_Biases%20rpt.ipynb) under [Reports](reports). 
+>Possible ethical implications and biases are described in the notebook [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Ethical%20Implications_Biases%20rpt.ipynb) under [Reports](reports). 
 
 ## Next Steps
 - First Step: share segments with marketing team; tag customers in Customer Relationship Manager (CRM)
@@ -240,10 +240,10 @@ Possible ethical implications and biases are described in the notebook [here](ht
 - Annual: re-run clustering with new data to validate and update segments
 
 # **Team Collaboration:**
-The team’s collaboration methods are described in the notebook [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Team%20Collaboration%20rpt.ipynb) under [Reports](reports). 
+>The team’s collaboration methods are described in the notebook [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Team%20Collaboration%20rpt.ipynb) under [Reports](reports). 
 
 ### Project Showcase Pitch Deck
-- See [Reports](reports) folder
+>- See [Reports](reports) folder
 
 ### Individual Reflection Videos - **placeholder links to update*
 - [Shaifali Tailor](http://google.com)
