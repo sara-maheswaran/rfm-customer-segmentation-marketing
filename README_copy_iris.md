@@ -187,7 +187,7 @@ Any random seeds or states used to ensure reproducibility are documented directl
 #### Demographics
 The majority of customers are married and hold a graduation-level education. The average customer age is approximately 57 years. A small number of unrealistic age outliers were identified and will need to be handled. Understanding age distribution helps determine how purchasing patterns vary across life stages.
 
-![alt text](images/age_distribution_with_mean_and_outlier_bounds.png)
+![Age_Distribution](images/age_distribution_with_mean_and_outlier_bounds.png)
 
 
 #### Income Analysis
