@@ -52,9 +52,6 @@ Spending habits vary across age groups. Certain age segments spend more overall,
 
 Spending categories are strongly related to each other, meaning customers who spend heavily in one category often spend heavily in others. Income, recency of purchase, and age group can serve to be particularly important variables for identifying meaningful customer segments.
 
-![Correlation](../../images/correlation_heatmap.png)
-
-
 ### **Key Insights for Segmentation**
 
 The analysis shows clear differences in income levels, spending behavior, product preferences, and purchasing channels. Wines and meat products dominate overall spending, and store purchases are the most common transaction method. Age, income, and household structure strongly influence buying behavior. Before building segmentation models, income gaps must be filled, outliers must be treated, and features must be scaled appropriately.
