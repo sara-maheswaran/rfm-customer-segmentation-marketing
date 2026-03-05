@@ -11,9 +11,9 @@
 
 - [Methodology](#methodology)
 
-- [Data Cleaning](#data-cleaning)
-
 - [Exploratory Data Analysis](#exploratory-data-analysis)
+
+- [Data Cleaning](#data-cleaning)
 
 - [Model Development](#model-development)
 
