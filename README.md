@@ -1,77 +1,25 @@
 # **Project Model**: Machine_Learning_Group_8
 
-## Project Title
+# Project Title
 Customer Segmentation for Targeted Marketing Optimization
 
-
-## Project Overview
-This project utilizes advanced machine learning techniques to transition marketing strategies from generalized outreach to highly targeted, data-driven campaigns. The analysis is split into two core objectives: identifying hidden customer segments through unsupervised clustering, and building predictive classification models to determine a customer’s likelihood to accept future promotions. Ultimately, this approach empowers the business to allocate marketing spend efficiently, maximize campaign ROI, and engage the right customers with the right offers.
+# Project Overview
+This project utilizes advanced machine learning techniques to transition marketing strategies from generalized outreach to highly targeted, data-driven campaigns. The analysis involves identifying hidden customer segments through unsupervised clustering, which empowers the business to allocate marketing spend efficiently, maximize campaign ROI, and engage the right customers with the right offers.
 
 ## Business Problem
-The company currently applies broad, non-personalized marketing campaigns across its entire customer base. This leads to:
+The company currently applies broad, non-personalized marketing campaigns across its entire customer base. This leads to inefficient marketing spend, poor differentiation between high-value and low-value customers, and missed upselling opportunities.
 
-- Inefficient marketing spend
-    * Utilizing a generalized strategy increases marketing spend by wasting budget on demographic segments with a near-zero probability of conversion
-- Low campaign conversion rates
-    * One-size-fits-all approaches for campaigns results in ignored promotions and stagnant sales throughput, despite high-volume outreach
-- Poor differentiation between high-value and low-value customers
-    * Without customer segmentation, customers who are highly profitable are treated the same as one-off buyers, thus leaving revenue streams open to competitor offers 
-- Missed upselling and retention opportunities
-    * High-probability cross-sell opportunities are missed and instead the company waits for customers to churn before trying to save them
-
-There is a critical need for data-driven segmentation and predictive modeling to understand customer behavior, anticipate their actions, and tailor marketing strategies accordingly.
-
-## Stakeholders
-The primary audience is:
-- Marketing Managers
-    * Customer segmentation will allow marketing managers to know who their most profitable customers are and how to reach them efficiently with ads tailored to their purchasing habits
-- CRM / Customer Experience Teams
-    * Loyalty programs and automated emails with tailored campaigns can be developed to decrease recency and build re-engagement where needed
-- Business Strategy Executives
-    * Overall company business strategies can be driven based on customer purchasing behaviour
-- Sales Leadership
-    * Insights into where customers make purchases can guide where investments can be made to increase sales - ex. store expansions vs e-commerce infrastructure 
-
-Secondary audience:
-- Data team / Analytics team (for implementation)
-    * Results from clustering and the models created can be used to update other tools used by the company as required (ex. Salesforce), modify to process larger datasets, or retrain the model when new data is available
+Thus, there is a critical need for data-driven segmentation to allow for tailoring of marketing strategies.
 
 ## Business Objective
 To leverage customer segmentation for targeted marketing, enhancing campaign effectiveness and driving long-term retention and revenue growth.
 
 The primary project goals are to:
-- Identify distinct customer clusters based on purchasing behavior, demographics, and engagement metrics.
+- Identify distinct customer clusters based on their transactional recency, purchase frequency, and total monetary value (RFM).
 - Increase campaign effectiveness and ROI by allowing for precise resource allocation and optimized marketing spend.
 
 **Success is measured by the clarity, validity, and business applicability of these clusters, ensuring they provide actionable insights that align stakeholders and confidently guide revenue strategies.**
 
-## Risks and Unknowns
-### Risks
-**1. Poor Cluster Interpretability:** Clusters may not be clearly distinct or actionable.
-
->Mitigation plan: Use validation metrics, limit cluster count, perform clear profiling, and validate with business stakeholders. Integrate visualization techniques to intuitively show cluster separations to stakeholders.
-
-**2. Data Quality Issues:** Missing income values, outliers (extreme spending), and/or inaccurate customer demographics.
->Mitigation plan: Clean data systematically (imputation, outlier treatment), conduct EDA, and document preprocessing steps. Employ automated monitoring systems to track data quality and report anomalies in real-time.
-
-**3. Over-Segmentation:** Too many clusters may confuse marketing teams and/or complicate execution.
->Mitigation plan: Select optimal cluster number using statistical methods and align with business execution capacity. Use automated tools to assist in determining the ideal number of clusters (e.g. elbow method).
-
-**4. Static Segmentation:** Customer behavior changes over time.
->Mitigation plan: Retrain models periodically and incorporate recency-based features to capture behavioral changes. Implement dynamic segmentation that adapts to real-time data, ensuring ongoing relevance and accuracy.
-
-**5. External Factors:** Economic downturn, seasonality, product changes may impact behavior, consumer preferences.
->Mitigation plan: Monitor model performance over time and reassess assumptions during economic or seasonal shifts. Users should create contingency plans and flexible strategies based on external factors, ensuring resilience and adaptability.
-
-### Unknowns
-- Customer Lifetime Value (CLV): *Uncertainty regarding the true CLV of segments, impacting marketing priorities.*
-- Customer Satisfaction: *Unknown satisfaction levels, influencing retention and campaign effectiveness.*
-- Competitor Influence: *Uncertainty about how competitor actions may affect customer behavior.*
-- Macro-Economic Conditions: *Potential impact of economic factors on purchasing behavior and marketing success.*
-- Variability in Customer Response: *Unclear how different segments will respond to targeted marketing strategies.*
-
-- Resource Availability: *Uncertain levels of resources for implementing targeted strategies.*
-***
 # Repository Structure - **to update*
 
 ```
@@ -86,25 +34,32 @@ The primary project goals are to:
 ├── .gitignore
 ├── README.md
 ```
-
-### Requirements - **placeholder link to update*
-- Specific libraries/frameworks suited to project requirements: [pyproject.toml](http://google.com) file
-
-### Installation and Run - **placeholder link to update*
-- See [SETUP.md](http://google.com) file
+# Installation and Run - **placeholder link to update*
+- See [SETUP.md](http://google.com) file **add link**
 
 ***
 # **Project Model**: Customer Segmentation for Targeted Marketing Optimization
 ## Dataset Description
 ### Source: [Kaggle – Customer Personality Analysis Dataset](https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis?resource=download)
-The dataset contains customer demographic information, purchasing behavior, and campaign response history.
+The dataset provides insights into customer demographics, spending habits, and purchasing behavior.
 ### Shape
 - Rows: 2,240 customers
 - Columns: 29 variables
 
 Each row represents a unique customer, and each column represents demographic information, purchasing behavior, or campaign interaction history.
 
+### Summary
+**Demographics:** Income, Year_Birth, Education, Marital_Status, Kidhome, Teenhome  
+**Spending Behavior:** MntWines, MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, MntGoldProds  
+**Purchase Channels:** NumWebPurchases, NumCatalogPurchases, NumStorePurchases, NumWebVisitsMonth  
+**Engagement:** Recency, AcceptedCmp1–AcceptedCmp5, Response 
+
 ### Key Variables and Attributes:
+
+<details>
+
+<br>
+
 | Variable Name      | Type          | Description                                                        | Category            |
 |--------------------|---------------|--------------------------------------------------------------------|---------------------|
 | ID                 | Integer       | Customer's unique identifier                                       | Identification      |
@@ -135,49 +90,144 @@ Each row represents a unique customer, and each column represents demographic in
 | NumStorePurchases   | Integer       | Number of purchases made directly in stores                       | Activity             |
 | NumWebVisitsMonth   | Integer       | Number of visits to the company's website in the last month       | Activity             |
 
-***
-# <code style="background:white;color:black">* WEEK 2 COMING SOON: * WIP BELOW</code>
+</details>
 
 ## Methodology
 
-### Data Cleaning
+Analyses for this customer segmentation project were conducted using **Python 3.11.14** in Jupyter Notebooks.  
 
+The project leveraged key libraries including **pandas**, **numpy**, **scikit-learn**, **matplotlib** and **seaborn** for data manipulation, visualization, clustering, and predictive modeling.  
 
-<input type="checkbox">
-<label>Why we cleaned our data, and the best strategy </label><br>
-<input type="checkbox">
-<label>Missing values or outliers addressed through preprocessing</label><br>
+Any random seeds or states used to ensure reproducibility are documented directly in the notebooks within the `model` folder. **add link**
 
-### Exploratory Data Analysis
+## Data Cleaning
 
-<input type="checkbox">
-<label>How we explored the relationships between different variables </label><br>
-<input type="checkbox">
-<label>Types of patterns/trends in our data </label><br>
+Purpose of Data Cleaning: Ensure accurate and actionable customer insights by addressing inconsistencies and anomalies in the marketing dataset.
 
-### Model Development
+Key Issues Identified:
+- Missing values in the Income column: 24 records (~1.1%)
+- Unrealistic birth years (e.g., 1893) leading to age outliers: 7 records (~0.3%)
+- Extreme high-income outliers (e.g., $666,666): 1 record (~0.04%)
+- Constant or non-informative columns: 2 columns (Z_CostContact, Z_Revenue).
+- Categorical inconsistencies in Education and Marital_Status.
+- Skewed spending variables: All spending variables (Wines, Fruits, Meat, Fish, Sweets, Gold) were highly right-skewed, affecting the distribution across all 2,240 records (~100%).
 
-This is documentation of the machine learning pipeline and model architecture for future reference:
+Data Cleaning & Preprocessing Strategy:
+- Income Imputation: Missing Income values were replaced with the median because income is right-skewed.
+- Outlier Removal: Extreme values in Age and Income were removed using the Interquartile Range (IQR) method.
+- Drop Constant Columns: Columns with no variance were removed.
+- Categorical Standardization & Consolidation: Standardized Education and Marital_Status and grouped categories into meaningful levels.
+- Datetime Conversion: Dt_Customer was converted to datetime and used to calculate Customer_Tenure_Days.
+- Feature Engineering: Created Age, Total_Spending, Total_Purchases, Children_at_home, Family_Size.
+- Log Transformation of Spending: Spending variables were log-transformed to reduce skew.
 
-<input type="checkbox">
-<label>Specific objectives and success criteria for our machine learning model</label><br>
-<input type="checkbox">
-<label>Relevant features for training</label><br>
-<input type="checkbox">
-<label>Machine learning algorithms that were suitable for our problem domain</label><br>
-<input type="checkbox">
-<label>Techniques used to validate and tune the hyperparameters</label><br>
-<input type="checkbox">
-<label>How data was split into training, validation, and test sets</label><br>
+## Exploratory Data Analysis
 
-## Results | Final Products
+- Skewed distributions: Apply scaling or transformation for numeric variables like income and purchase amounts.
+- No multicollinearity: Features are largely independent, simplifying modeling.
+- Customer behavior insights:
+    - High spending in wine and meat
+    - Fewer children correlates with higher purchases
+    - In-store purchases dominate
+    - Majority of customers are married and hold a graduation-level education
+    - Average customer age is approximately 57 years
 
-### Models
-- See [Models](models) folder
+For more inisights, see Exploratory Data Analysis folder. **add link**
 
-#### Ethical Implications / Biases:
-<input type="checkbox">
-<label>Ethical implications or biases associated with our machine learning model</label><br>
+## Model Development
+
+### Customer Segmentation (RFM KMeans Clustering)
+
+Below is the model development process for segmenting customers using RFM (Recency, Frequency, Monetary) KMeans clustering. The goal is to group customers based on their purchasing behavior to make informed marketing strategies and improve customer engagement.
+
+### Model Objectives & Success Criteria
+
+**Objectives:**
+- Segment customers into meaningful groups using their purchasing behavior.
+- Identify high value and loyal customers for targeted campaigns.
+- Provide actionable insights to improve retention and sales.
+
+**Success Criteria:**
+- Optimal number of clusters determined via **Elbow Method** and **Silhouette Score**.
+- Distinct and interpretable customer segments with business relevance.
+
+### Relevant Features for Training
+- Recency : Days since last purchase
+- Frequency  : Total number of purchases
+- Monetary  : Total spending amount
+
+These features capture customer engagement, loyalty, and value essential for RFM based segmentation.
+
+### Algorithm Selection
+
+**KMeans Clustering** was chosen because:
+
+- The task is unsupervised (no labeled output).
+- RFM features are numerical and suitable for distance-based clustering.
+- KMeans is computationally efficient and widely used for customer segmentation.
+
+### Hyperparameter Tuning & Validation
+- Evaluated K values from 2 to 10 using:
+    - Elbow Method: Looked for the “elbow” point in the Inertia curve.
+    - Silhouette Score: Measured cluster cohesion and separation.
+- Result:
+    - Optimal K = 4 provides clear, distinct customer segments.
+
+![Elbow and Silhoutte Score](images/elbow_and_silhoutte_score.png)
+
+### Initialization
+- Number of initializations (n_init): Tested multiple runs to avoid local minima.
+- Random state: Set for reproducibility.
+
+### Validation Techniques
+- Silhouette Score : measures how similar an object is to its own cluster vs other clusters.
+
+![Silhouette Score](images/silhoutte_k_4.png)
+
+- Business interpretation : Segments evaluated for actionable insights
+    - Cluster 0 : New / Occasional
+    - Cluster 1 : Potential Loyals
+    - Cluster 2 : Loyal Customers
+    - Cluster 3 : At Risk/Low Value
+
+![PCA](images/customer_segments_visualized_in_2D.png)
+
+### Key Results
+- Customers are segmented into 4 distinct clusters based on recency, frequency, and monetary value.
+- New / Occasional, Potential Loyals, Loyal Customers and At Risk/Low Value customer segments are easily identifiable.
+- The model provides a foundation for targeted marketing, personalized campaigns, and loyalty strategies
+
+### Cluster Profiling
+There are four distinct customer segments which can be used to move from broad marketing campaigns to data-driven, personalized strategies:
+
+| Cluster | Segment Type | No. of Customers | Profile Characteristics | Marketing Strategy |
+| ---- | ---- | ---- | ---- |  ---- |
+| 0 | New / Occasional | 524 | Low recency, low frequency, low monetary | Engagement: Incentivize 2nd purchase, cross-sell, and small bundle offers |
+| 1 | Potential Loyals | 616 | High recency, high frequency, high monetary | Re-engagement: "We miss you" emails, loyalty points, and win-back discounts |
+| 2 | Loyal Customers | 573 | Low recency, high frequency, high monetary | Retention: Exclusive VIP offers, early access, and premium campaigns |
+| 3 | At-Risk / Low Value | 516 | High recency, low frequency, low monetary |	Reactivation: Low-cost reminders; suppress from high-cost marketing if inactive |
+
+### Cluster Spending
+The total purchaces and spending of each cluster is:
+
+| Cluster |	Segment |	Customers | Total Revenue ($) | Avg_Revenue per Customer ($) | Avg_Purchases (Qty.) |	Revenue Share (%) |
+| --- |	--- | --- | --- | --- |	--- | --- |
+| 1 | Loyal Customers |	573 |	14142.042267 | 24.680702 | 20.727749 | 33.454533 |
+| 0 | At Risk/Low Value | 516 |	6432.098454 | 12.465307 |	8.482558 | 15.215826 |
+| 2	| New / Occasional | 524 | 5967.641575 | 11.388629 | 7.519084 | 14.117103 |
+| 3	| Potential Loyals | 616 | 15730.641844 | 25.536756 | 21.021104 | 37.212538 |
+
+## Ethical Implications & Biases
+Possible ethical implications and biases are described in the XXX notebook **(add link)**
+
+## Team Collaboration
+The team’s collaboration methods are described in the XXX notebook **(add link)**
+
+#### Next Steps:
+- First Step: share segments with marketing team; tag customers in Customer Relationship Manager (CRM)
+- Next Campaign: design one test campaign per segment, measure response lift
+- Quarterly: track segment migration - i.e. if customers are moving between groups
+- Annual: re-run clustering with new data to validate and update segments
 
 ### Project Showcase Pitch Deck
 - See [Reports](reports) folder
