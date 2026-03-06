@@ -1,4 +1,4 @@
-# **Customer Segmentation for Targeted Marketing Optimization** (ML8 Project)
+# **Customer Segmentation for Targeted Marketing Optimization**
 
 # 📍 **Content Navigation:**
 [Project Summary](#project-summary)
@@ -19,7 +19,7 @@
 
 - [Ethical Implications and Biases](#ethical-implications-and-biases)
 
-- [Next Steps](#next-steps)
+- [Next Steps and Future Enhancements](#next-steps-and-future-enhancements)
 
 [Team Collaboration](#team-collaboration)
 
@@ -44,10 +44,10 @@ The primary project goals are to:
 
 **Success is measured by the clarity, validity, and business applicability of these clusters, ensuring they provide actionable insights that align stakeholders and confidently guide revenue strategies.**
 
->### **Full project plan is outlined [here](google.com).**
+>The full project plan is outlined [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Project_Plan.ipynb).
 
 # **Installation and Run:**
->- Read and follow instructions in [SETUP.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/SETUP.md) file
+>Read and follow instructions in the [SETUP.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/SETUP.md) file.
 
 ###
 
@@ -111,7 +111,20 @@ Analyses for this customer segmentation project were conducted using **Python 3.
 
 The project leveraged key libraries including **pandas**, **numpy**, **scikit-learn**, **matplotlib** and **seaborn** for data manipulation, visualization, clustering, and predictive modeling.  
 
-Any random seeds or states used to ensure reproducibility are documented directly in the notebooks within the `model` folder. **add link**
+Any random seeds or states used to ensure reproducibility are documented directly in the notebooks within the [Models](Models) folder. 
+
+## Exploratory Data Analysis
+
+- Skewed distributions: Apply scaling or transformation for numeric variables like income and purchase amounts.
+- No multicollinearity: Features are largely independent, simplifying modeling.
+- Customer behavior insights:
+    - High spending in wine and meat
+    - Fewer children correlates with higher purchases
+    - In-store purchases dominate
+    - Majority of customers are married and hold a graduation-level education
+    - Average customer age is approximately 57 years
+
+>For more insights, see [Exploratory Data Analysis README.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/tree/main/data/raw).
 
 ## Data Cleaning
 
@@ -134,18 +147,7 @@ Data Cleaning & Preprocessing Strategy:
 - Feature Engineering: Created Age, Total_Spending, Total_Purchases, Children_at_home, Family_Size.
 - Log Transformation of Spending: Spending variables were log-transformed to reduce skew.
 
-## Exploratory Data Analysis
-
-- Skewed distributions: Apply scaling or transformation for numeric variables like income and purchase amounts.
-- No multicollinearity: Features are largely independent, simplifying modeling.
-- Customer behavior insights:
-    - High spending in wine and meat
-    - Fewer children correlates with higher purchases
-    - In-store purchases dominate
-    - Majority of customers are married and hold a graduation-level education
-    - Average customer age is approximately 57 years
-
->**For more insights, see [Exploratory Data Analysis README.md](https://github.com/sara-maheswaran/Machine_Learning_Group_8/tree/main/data/raw).**
+> For further details, see [Data Preprocessing README.md](data/preprocessed/README.md).
 
 ## Model Development
 
@@ -169,7 +171,7 @@ Below is the model development process for segmenting customers using RFM (Recen
 - Frequency  : Total number of purchases
 - Monetary  : Total spending amount
 
-These features capture customer engagement, loyalty, and value essential for RFM based segmentation.
+These features capture customer engagement, loyalty, and value essential for [RFM](https://medium.com/@hhuseyincosgun/customer-segmentation-rfm-analysis-recency-frequency-monetary-5b29d5d45e35) based segmentation.
 
 ### Algorithm Selection
 
@@ -213,7 +215,7 @@ These features capture customer engagement, loyalty, and value essential for RFM
 ### Cluster Profiling
 There are four distinct customer segments which can be used to move from broad marketing campaigns to data-driven, personalized strategies:
 
-| Cluster | Segment Type | No. of Customers | Profile Characteristics | Marketing Strategy |
+| Cluster | Segment Type | No. of Customers | Profile Characteristics | Recommended Marketing Strategy |
 | ---- | ---- | ---- | ---- |  ---- |
 | 0 | New / Occasional | 524 | Low recency, low frequency, low monetary | Engagement: Incentivize 2nd purchase, cross-sell, and small bundle offers |
 | 1 | Potential Loyals | 616 | High recency, high frequency, high monetary | Re-engagement: "We miss you" emails, loyalty points, and win-back discounts |
@@ -230,10 +232,16 @@ The total purchaces and spending of each cluster is:
 | 2	| New / Occasional | 524 | 5967.641575 | 11.388629 | 7.519084 | 14.117103 |
 | 3	| Potential Loyals | 616 | 15730.641844 | 25.536756 | 21.021104 | 37.212538 |
 
+### Return on Investment Improvement
+Based on an assumption of a $500 marketing cost for each segment, converting 20% of the At Risk Segment to loyal customers adds $1,260 in revenue and 152% return on investment (ROI).
+
+![ROI](images/ROI.png)
+
+
 ## Ethical Implications and Biases
 >Possible ethical implications and biases are described in the notebook [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Ethical%20Implications_Biases%20rpt.ipynb) under [Reports](reports). 
 
-## Next Steps
+## Next Steps and Future Enhancements
 - First Step: share segments with marketing team; tag customers in Customer Relationship Manager (CRM)
 - Next Campaign: design one test campaign per segment, measure response lift
 - Quarterly: track segment migration - i.e. if customers are moving between groups
@@ -243,9 +251,9 @@ The total purchaces and spending of each cluster is:
 >The team’s collaboration methods are described in the notebook [here](https://github.com/sara-maheswaran/Machine_Learning_Group_8/blob/main/reports/Team%20Collaboration%20rpt.ipynb) under [Reports](reports). 
 
 ### Project Showcase Pitch Deck
->- See [Reports](reports) folder
+>See .PDF file under [Reports](reports) folder.
 
-### Individual Reflection Videos - **placeholder links to update*
+### Individual Reflection Videos:
 - [Shaifali Tailor](http://google.com)
 - [Iris Jiongco](http://google.com) 
 - [Saraneya Maheswaran](http://google.com)
@@ -262,6 +270,8 @@ The total purchaces and spending of each cluster is:
     └── preprocessed
     └── raw
 ├── experiments
+    └── Cluster_Model
+    └── Exploratory_Data_Analysis
 ├── images
 ├── models
 ├── reports
@@ -272,12 +282,11 @@ The total purchaces and spending of each cluster is:
 ├── uv.lock
 ```
 
-- **data:** Includes raw data and Exploratory Data Analysis, and preprocessed data.
-- **experiments:** Data experiments contributed by all team members.
+- **data:** Includes raw data with Exploratory Data Analysis (EDA) README.md, and preprocessed data.
+- **experiments:** Data experiments contributed by all team members, along with EDA folder.
 - **images:** Includes charts, graphs, tables from analysis.
-- **models:** Project models.
-- **reports:** Project reports.
-- **src:** Source code, databases, logs.
+- **models:** Includes project models.
+- **reports:** Includes project reports.
 - **.gitignore:** Files to exclude.
 - **README.md:** This file.
 - **SETUP.md:** Contains the steps required to set up this repo for the module.
