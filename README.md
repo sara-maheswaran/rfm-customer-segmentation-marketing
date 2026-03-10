@@ -258,7 +258,7 @@ Based on an assumption of a $500 marketing cost for each segment, converting 20%
 - [Iris Jiongco](https://drive.google.com/file/d/1243wA1KVSzv2cpAaaUWnwDds66IExJrY/view?usp=sharing) 
 - [Saraneya Maheswaran](https://drive.google.com/file/d/1D9wdwq17ArXmoY7V5QFk4QgxlXBysynk/view?usp=sharing)
 - [David Ancor](http://google.com)
-- [Anika Choudhury](http://google.com](https://drive.google.com/file/d/1yFYFhio_bAVAqqb0VbPRBGo2nd1rVUX3/view?usp=drive_link)
+- [Anika Choudhury](https://drive.google.com/file/d/1yFYFhio_bAVAqqb0VbPRBGo2nd1rVUX3/view?usp=drive_link)
 - [Stella Hoang](https://drive.google.com/file/d/1EJQsNSQDshckSP_-ZoT7wQqsVc1L3Hn-/view?usp=sharing)
 
 
